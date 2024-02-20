@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Calendar</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="icon" href="" type="image/x-icon" />
+	<meta name="theme-color" content="#17181a">
+	<meta name="msapplication-navbutton-color" content="#17181a">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    
+    <!-- CSS -->
+    <link href="assets/css/default.css" rel="stylesheet" type="text/css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+    <!-- JavaScript -->
+    <script language="javascript" type="text/javascript" src="assets/js/default.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!--
+        Inpiration
+        https://www.figma.com/file/aCQcOCApgxXOiWkUxUSnng/Date-picker?node-id=704%3A7382&mode=dev
+    -->
+</head>
+<body>
+    <div class="container row">
+        <div id="calendar" class="calendar__component" data-year="" data-month="">
+            <div class="calendar__control row">
+                <div class="control__month __previous">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M8.79099 17.2C8.61826 17.2 8.44553 17.1363 8.30917 17L2.79099 11.4818C2.52735 11.2182 2.52735 10.7818 2.79099 10.5182L8.30917 4.99997C8.57281 4.73634 9.00917 4.73634 9.27281 4.99997C9.53644 5.26361 9.53644 5.69997 9.27281 5.96361L4.23644 11L9.27281 16.0363C9.53644 16.3 9.53644 16.7363 9.27281 17C9.14553 17.1363 8.96371 17.2 8.79099 17.2Z" fill="#43484E"/>
+                        <path d="M18.7273 11.6819L3.4273 11.6819C3.05457 11.6819 2.74548 11.3728 2.74548 11.0001C2.74548 10.6273 3.05457 10.3182 3.4273 10.3182L18.7273 10.3182C19.1 10.3182 19.4091 10.6273 19.4091 11.0001C19.4091 11.3728 19.1 11.6819 18.7273 11.6819Z" fill="#43484E"/>
+                    </svg>
+                </div>
+
+                <div class="calendar__year__month">
+                    <select id="month">
+                        <option value="0">Janeiro</option>
+                        <option value="1">Fevereiro</option>
+                        <option value="2">Março</option>
+                        <option value="3">Abril</option>
+                        <option value="4">Maio</option>
+                        <option value="5">Junho</option>
+                        <option value="6">Julho</option>
+                        <option value="7">Agosto</option>
+                        <option value="8">Setembro</option>
+                        <option value="9">Outubro</option>
+                        <option value="10">Novembro</option>
+                        <option value="11">Dezembro</option>
+                    </select>
+                    <input type="number" id="year">
+                </div>
+
+                <div class="control__month __next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                        <path d="M13.2093 17.2C13.382 17.2 13.5547 17.1363 13.6911 17L19.2093 11.4818C19.4729 11.2182 19.4729 10.7818 19.2093 10.5182L13.6911 4.99997C13.4274 4.73634 12.9911 4.73634 12.7274 4.99997C12.4638 5.26361 12.4638 5.69997 12.7274 5.96361L17.7638 11L12.7274 16.0363C12.4638 16.3 12.4638 16.7363 12.7274 17C12.8547 17.1363 13.0365 17.2 13.2093 17.2Z" fill="#43484E"/>
+                        <path d="M3.27282 11.6819L18.5728 11.6819C18.9455 11.6819 19.2546 11.3728 19.2546 11.0001C19.2546 10.6273 18.9455 10.3182 18.5728 10.3182L3.27282 10.3182C2.90009 10.3182 2.591 10.6273 2.591 11.0001C2.591 11.3728 2.90009 11.6819 3.27282 11.6819Z" fill="#43484E"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="calendar__day__week row">
+                <span>Dom</span>
+                <span>Seg</span>
+                <span>Ter</span>
+                <span>Qua</span>
+                <span>Qui</span>
+                <span>Sex</span>
+                <span>Sab</span>
+            </div>
+
+            <div class="calendar__days row"></div>
+            <div class="calendar__subtitle row">
+                Hoje
+            </div>
+        </div>
+    </div>
+</body>
+</html>
